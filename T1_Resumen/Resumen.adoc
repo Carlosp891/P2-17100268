@@ -1,0 +1,241 @@
+= Descripción del modelo de caja
+
+En el modelo de la caja lo que se encuentra dentro de ella son todos nuestros elementos que usamos en nuestro sitio web es com decir que es nuestro contenedor el cual almacenara todo nuestro contenido de html este modelo contiene varias propiedades las cuales son width, height, padding, margin, border, background
+con ellas se logra trabajar en este modelo para los acomodos de nuestro contenido.
+
+= content, padding, border, margin, outline
+
+- *Content:* Esto es el contenido del html como pueden ser las etiquetas ,imagenes etc.
+
+- *Padding:* Este es el espacio libre el cual es opcional que existe entre el borde y el contenido
+
+- *Border:* Es la línea que encierra completamente el contenido y su relleno.
+
+- *Margin:* Es la distancia que desde el borde de un elemento hasta otro
+
+- *Outline:* Esta propiedad establece algunas o todas las propiedades de todos los perfiles de los elementos.
+
+
+
+image::https://www.laurachuburu.com.ar/images/tutoriales/css/modelo-de-caja.png[cosa]
+
+= Explicación de las propiedades: display (box, inline, inline-box, none box-sizing (content-box, border-box)
+
+La propiedad display establece el tipo de caja generada por un elemento
+
+*box:* Estos elementos no producen una caja específica por sí mismos. Son reemplazados por su pseudo-caja y sus cajas secundarias. 
+
+*inline:* Muestra en la misma línea (respetando el flujo) todos los elementos y no acepta las propiedades width, height ni margenes verticales.
+
+*inline-box:* Este es parecido al inline pero en este tu puedes establecer las propiedades widht,height el cual si sera utlizado
+
+*box-sizing:* Propiedad que se utiliza para definir como se calcaula e anchi y alto de un elemento.
+
+*none:* Permite desactivar la visualizacion de un elemento; cuando no se utiliza.
+
+*content-box:* En esta propiedad solo se aplican los valores de ancho y alto al contenido.
+
+*border-box:* En esta propiedad se aplican los valores de ancho y alto al contenido,al relleno y al borde
+
+
+
+= Concepto de Flujo de Documento.
+
+Bueno el flujo del documento en html es la forma en la que la escritura de elementos recorre el lienzo que nos presenta el navegador.
+
+
+= Tipos de posicionamiento: static, relative, absolute, fixed, sticky
+
+*Static:* El elemento es posicionado de acuerdo al flujo normal del documento. Las propiedades top, right, bottom, left, and z-index no tienen efecto.
+
+*Relative:* El elemento es posicionado de acuerdo al flujo normal del documento, y luego es desplazado con relación a sí mismo, con base en los valores de top, right, bottom, and left. El desplazamiento no afecta la posición de ningún otro elemento; por lo que, el espacio que se le da al elemento en el esquema de la página es el mismo como si la posición fuera static.
+
+*Absolute:* El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página. Es posicionado relativo a su ancestro posicionado más cercano, si lo hay; de lo contrario, se ubica relativo al bloque contenedor inicial. Su posición final está determinada por los valores de top, right, bottom, y left.
+
+*Fixed:* El elemento es removido del flujo normal del documento, sin crearse espacio alguno para el elemento en el esquema de la página
+
+*Sticky:* El elemento se posiciona de acuerdo con el flujo normal del documento, y luego desplazado con respecto a su raíz flujo y bloque de contención , incluyendo elementos relacionados con tablas, basado en los valores de top, right, bottom, y left. El desplazamiento no afecta la posición de ningún otro elemento.
+
+
+
+= Unidades de medida en CSS:
+
+=== absolutas ( solamente mencionarlas )
+
+- El milímetro, mm
+- El centímetro, cm
+- La incha, in
+- El punto, pt
+- La pica, pc 
+
+=== relativas (con descripción completa px, em ,rem....)
+- *El porcentaje, %.* Se define respecto del ancho disponible. Por ejemplo el ancho del contenedor que atrapa una capa. Es común que a esta capa de «orden superior» se le aplique un ancho fijo. Normalmente en píxeles. (hablamos de los px un poco más adelante).
+- *em.* Un em hace referencia al tamaño en px del párrafo. Típicamente 1em equivale a 12pt. 12pt son  16px. Tiene su origen en el ancho de la letra mayúscula M de la tipografía en uso.
+Se usan cada vez más el rem, el vh, vw, vmin y vmax.
+
+- *vh, 1% del viewport vertical.* El viewport es el browser window height; la altura definida por el navegador web.
+- *vw, 1% del viewport horizontal.* El viewport es el browser window width; el ancho definidao por el navegador web.
+- *vmin,* valor mínimo de vh.
+- *vmw,* valor mínimo de vw.
+- *rem,* muy parecida al em pero en lugar de ser en base al font-size del elemento es en base al font-size del elemento root. (El root es un concepto muy similar al de selector universal pero con más especificidad.
+
+=== Selectores Básicos
+*Selector universal:*
+
+Se utiliza para seleccionar todos los elementos de la página. El siguiente ejemplo elimina el margen y el relleno de todos los elementos HTML (por ahora no es importante fijarse en la parte de la declaración de la regla CSS):
+
+```
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+
+*Selector de tipo o etiqueta*
+
+Selecciona todos los elementos de la página cuya etiqueta HTML coincide con el valor del selector. El siguiente ejemplo selecciona todos los párrafos de la página:
+```
+p {
+  ...
+}
+```
+
+*Selector descendente*
+
+Selecciona los elementos que se encuentran dentro de otros elementos. Un elemento es descendiente de otro cuando se encuentra entre las etiquetas de apertura y de cierre del otro elemento.
+
+El selector del siguiente ejemplo selecciona todos los elementos <span> de la página que se encuentren dentro de un elemento <p>:
+```
+p span { color: red; }
+```
+
+*Selector de clase*
+Si se considera el siguiente código HTML de ejemplo:
+```
+<body>
+  <p>Lorem ipsum dolor sit amet...</p>
+  <p>Nunc sed lacus et est adipiscing accumsan...</p>
+  <p>Class aptent taciti sociosqu ad litora...</p>
+</body>
+```
+*Selectores de ID*
+El selector de ID permite seleccionar un elemento de la página a través del valor de su atributo id. Este tipo de selectores sólo seleccionan un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página.
+
+La sintaxis de los selectores de ID es muy parecida a la de los selectores de clase, salvo que se utiliza el símbolo de la almohadilla (#) en vez del punto (.) como prefijo del nombre de la regla CSS:
+```
+#destacado { color: red; }
+
+<p>Primer párrafo</p>
+<p id="destacado">Segundo párrafo</p>
+<p>Tercer párrafo</p>
+```
+=== Relación (Espacio, >, +, ~ )
+*Selector Descendente*
+
+Un selector descendente le da estilos a uno o más elementos que se encuentran dentro de otros elementos, sin importar la profundidad.
+
+*Selector De Hijo*
+
+Este selector es similar al selector descendiente, solo que este da estilos a un elemento que es hijo de otro elemento.
+
+En el selector de hijo el elemento tiene que ser hijo directo del elemento y no va más profundo, se indica con el signo de “mayor que” *>*
+
+*Selector Adyacente De Hermanos*
+
+El selector adyacente da estilos al elemento que sea hermano de otro elemento, es decir, que los dos tengan el mismo padre y se indica con el signo *+*
+
+*Selector General De Hermanos*
+
+El selector general de hermanos es totalmente igual al selector adyacente, solo que este si toma en cuenta a todos los hermanos de hijo1 y se indica con el signo ~
+
+
+
+=== PseudoSelectores que son y con 4 ejemplos de cada uno
+
+=== Pseudoclase
+
+ *La pseudo-clase :first-child*
+
+La pseudo-clase :first-child selecciona el primer elemento hijo de un elemento. Si se considera el siguiente ejemplo:
+```
+p em:first-child {
+  color: red;
+}
+```
+*:link*
+
+Los enlaces que no se han visitado (Sólo para elementos <a>)
+
+*:hover*
+
+Elemento cuando el usuario pasa el ratón sobre el +
+
+*:last-child*
+
+El último hijo del elemento seleccionado +
+
+
+
+=== PseudoElemento
+
+*::first-letter*
+
+La primera letra de un elemento de bloque +
+_::first-line_ +
+
+La primera línea de un elemento de bloque +
+*_::before*
+
+La ubicación que esta antes de un elemento +
+_::after_ + 
+
+La ubicación que esta después de un elemento +
+
+= Descripción de la cascada y sus niveles
+
+La cascada se refiere a que las declaraciones de propiedades pueden estar en varios sitios y dependiendo este sitio, afectara a mas o menos elementos.
+
+=== Importancia 
+
+
+*User Agent* 
+
+Estilos por defecto del navegador
+
+*Usuario* 
+
+Estilos que añade el usuario por ciertas razones
+*Autor*
+
+Estilos que declara el autor del documento
+
+=== Especificidad
+
+la especificidad son los puntos que puede equivaler un selector al momento de aplicar algun estilo.
+
+Cuanto mas específico es un selector, mas importancia tiene la regla.
+A igual especificidad, se aplica la última regla declarada.
+
+*Orden*
+
+Cuando varios selectores CSS apuntan a el mismo elemento y tienen
+la misma especificidad se toma en cuenta el orden de en la declaración.
+
+asi como tambien si tuvieramos varias hojas de css se tomara en cuenta el orden de estas.
+
+
+
+= El concepto de especificidad y cómo se calcula.
+
+Es la manera mediante la cual los navegadores deciden cuales valores de una propiedad CSS son más importantes para un elemento y, por lo tanto, serán aplicados.
+
+como se calcula
+[cols="1,2,1"]
+|===
+Jerarquía| Selector| Especificidad|
+4 |Etiqueta html |1,0,0,0 puntos|
+3 |ID| 0,1,0,0 puntos|
+2 |Clase, pseudoclase, atributo |0,0,1,0 puntos|
+1 |Elemento, psedoelemento |0,0,0,1 puntos|
+0 |Selector universal *| 0,0,0,0 puntos|
+|===
