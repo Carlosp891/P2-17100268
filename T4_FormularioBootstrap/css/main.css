@@ -1,0 +1,102 @@
+html {
+	font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-image: url(https://i.pinimg.com/originals/98/cf/09/98cf0938c0e52c81955d72e989b6ca6d.jpg);
+}
+
+/* Contenedor el cual tiene todo lo del formulario*/
+#Contenedor {
+	height: auto;
+	background-color: rgba(65, 34, 10,0.8);
+	margin: 5% auto;
+	
+}
+
+.form__top {
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem rgb(173, 156, 100);
+	margin-bottom: 1rem;
+}
+
+.form__top h2 {
+	font-weight: bold;
+	color: #CAC8C8;
+	font-size: 18px;
+}
+
+h2 span {
+	color: rgb(189, 171, 158);
+}
+
+.form__reg {
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn__form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn__submit{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+}
+
+/* Clase del div contenedor de los botones y el checkbox*/
+.btn__submit{
+	width: 40%;
+	border-bottom: none;
+	background-color: #31B1E5;
+	color: white;
+}
+
+/*Clase*/
+.btn__submit:hover {
+	background-color: #4C9ED9;
+}
+
+.encabezado,#P1{
+	color: aliceblue;
+}
+
+#P1{
+	font-size: 16px;
+	font-family:'Lato', sans-serif;
+}
+
+#Pez{
+	width: 50%;
+	height: 50%;
+	margin-left: 25%;
+}
+
+#Pez video{
+
+	width: 100%;
+	height: 100%;
+
+}
+
+#Titulo
+{
+font-size: 300%;
+font-family: 'Times New Roman';	
+}
+
